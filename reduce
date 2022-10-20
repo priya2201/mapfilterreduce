@@ -1,0 +1,45 @@
+//where you taken all the array elements and put into a single one
+const arr=[3,2,1,4,5];
+function findSum(arr){
+    let sum=0;
+    for(let i=0;i<arr.length;i++){
+        sum=sum+arr[i]
+    }
+    return sum;
+}
+console.log(findSum(arr));
+const output=arr.reduce(function(accumulator,currentvalue){
+    accumulator=accumulator+currentvalue;
+  return accumulator;
+},2);
+console.log(output);
+
+function findmax(arr){
+    let max=0;
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]> max){
+            max=arr[i];
+        }
+    }
+    return max;
+
+}
+const output1=arr.reduce(function(accumulator,currentvalue){
+     if(currentvalue>0){
+        accumulator=currentvalue;
+     }
+     return accumulator;
+},0)
+console.log(output1);
+// function findmin(arr){
+//  let min;
+//     for(let i=0;i<arr.length;i++){
+//         if(arr[i]<min){
+//             min=arr[i];
+//         }
+//     }
+//     return min;
+
+// }
+console.log(findmax(arr));
+// console.log(findmin(arr));
